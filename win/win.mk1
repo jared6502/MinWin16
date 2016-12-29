@@ -1,0 +1,16 @@
+!define BLANK ""
+C:\Users\owner\Documents\w31\win\main.obj : C:\Users\owner\Documents\w31\win&
+\main.c .AUTODEPEND
+ @C:
+ cd C:\Users\owner\Documents\w31\win
+ *wcc main.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -bt=dos -fo=.obj -ms
+
+C:\Users\owner\Documents\w31\win\win.com : C:\Users\owner\Documents\w31\win\&
+main.obj .AUTODEPEND
+ @C:
+ cd C:\Users\owner\Documents\w31\win
+ @%write win.lk1 FIL main.obj
+ @%append win.lk1 
+ *wlink name win d all sys dos com op m libf cstart_t op maxe=25 op q op sym&
+f @win.lk1
+

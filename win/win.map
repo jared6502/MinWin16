@@ -1,0 +1,134 @@
+Open Watcom Linker Version 1.9
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       16/11/14 20:47:12
+Executable Image: win.com
+creating a DOS .COM executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          0000:0000            00000558
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+_TEXT                  CODE           DGROUP         0000:0000       00000516
+_DATA                  DATA           DGROUP         0051:0006       00000038
+XIB                    DATA           DGROUP         0054:000e       00000000
+XI                     DATA           DGROUP         0054:000e       00000006
+XIE                    DATA           DGROUP         0055:0004       00000000
+YIB                    DATA           DGROUP         0055:0004       00000000
+YI                     DATA           DGROUP         0055:0004       00000000
+YIE                    DATA           DGROUP         0055:0004       00000000
+CONST                  DATA           DGROUP         0055:0004       00000000
+STRINGS                DATA           DGROUP         0055:0004       00000000
+DATA                   DATA           DGROUP         0055:0004       00000000
+CONST2                 DATA           DGROUP         0055:0004       00000000
+_BSS                   BSS            DGROUP         0055:0004       00000004
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: C:\WATCOM/lib286/dos\cstart_t.obj(cstart)
+0000:0100      _cstart_
+0000:01bb*     _Not_Enough_Memory_
+0000:02de      __exit_
+0000:02e0      __do_exit_with_msg__
+0000:0323      __GETDS
+Module: main.obj(C:\Users\owner\Documents\w31\win\main.c)
+0000:032c      main_
+Module: C:\WATCOM/lib286/dos\clibs.lib(xmsg.c)
+0000:035b*     __exit_with_msg_
+0000:035e      __fatal_runtime_error_
+Module: C:\WATCOM/lib286/dos\clibs.lib(cmain086.c)
+0000:0378      __CMain
+Module: C:\WATCOM/lib286/dos\clibs.lib(initrtns.c)
+0000:03c9*     __FInitRtns
+0000:03cd      __InitRtns
+0000:0428*     __FFiniRtns
+0000:042c      __FiniRtns
+Module: C:\WATCOM/lib286/dos\clibs.lib(crwdata)
+0000:0516      __curbrk
+0000:051e      __STACKLOW
+0000:0520      __STACKTOP
+0000:0522      __cbyte
+0000:0524      __child
+0000:0526      __no87
+0000:0534      ___FPE_handler
+0000:0518      __psp
+0000:0528      __get_ovl_stack
+0000:052c      __restore_ovl_stack
+0000:0530      __close_ovl_file
+0000:0538      __LpCmdLine
+0000:053c      __LpPgmName
+0000:051a      __osmajor
+0000:051b      __osminor
+0000:051c      __osmode
+0000:051d      __HShift
+Module: C:\WATCOM/lib286/dos\clibs.lib(uselfn.c)
+0000:0540      ___uselfn
+Module: C:\WATCOM/lib286/dos\clibs.lib(dosseg)
+0000:0490      __DOSseg__
+Module: C:\WATCOM/lib286/dos\clibs.lib(stksize.c)
+0000:0542      __stacksize
+Module: C:\WATCOM/lib286/dos\clibs.lib(stk)
+0000:0497      __STK
+0000:04ae*     __STKOVERFLOW_
+Module: C:\WATCOM/lib286/dos\clibs.lib(cmodel)
+0000:04ca      _small_code_
+0000:04ca*     CodeModelMismatch
+Module: C:\WATCOM/lib286/dos\clibs.lib(enterdb.c)
+0000:04ca      __EnterWVIDEO_
+0000:0546+     ___WD_Present
+Module: C:\WATCOM/lib286/dos\clibs.lib(___argc.c)
+0000:0554      ____Argc
+0000:0556      ____Argv
+Module: C:\WATCOM/lib286/dos\clibs.lib(amblksiz.c)
+0000:0548      __amblksiz
+Module: C:\WATCOM/lib286/dos\clibs.lib(exit.c)
+0000:04e6+     __null_int23_exit_
+0000:04e7      exit_
+0000:0505*     _exit_
+0000:054a+     ___int23_exit
+0000:054c+     ___FPE_handler_exit
+Module: C:\WATCOM/lib286/dos\clibs.lib(sgdef086)
+0000:054e      __Start_XI
+0000:0554      __End_XI
+0000:0554      __Start_YI
+0000:0554      __End_YI
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+C:\WATCOM/lib286/dos\clibs.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  1000 (4096.)
+Memory size:  0558 (1368.)
+Entry point address: 0000:0100
+Link time: 00:00.16
