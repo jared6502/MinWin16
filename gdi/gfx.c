@@ -6,7 +6,7 @@ void putpixel(int x, int y, pixel p, bitmap dst)
 	{
 		if (x >= 0 && x < dst.width && y >= 0 && y < dst.height)
 		{
-			dst.data[y][x] = p;
+			dst.data[(y * dst.width) + x] = p;
 		}
 	}
 }
@@ -51,7 +51,7 @@ void line(int x1, int y1, int x2, int y2, pixel p, bitmap dst)
 	//get distances
 	dx = xa - xb;
 	dy = ya - yb;
-	dydx = dy / dx
+	dydx = dy / dx;
 	
 	//draw line
 	for (i = 0; i < dx; i++)
@@ -75,7 +75,7 @@ void putbitmap(int x, int y, bitmap src, bitmap dst)
 		{
 			for (j = 0; j < src.width; j++)
 			{
-				putpixel(x + j, y + i, data[j][i], dst);
+				putpixel(x + j, y + i, data[(i * src.width) + j], dst);
 			}
 		}
 	}
